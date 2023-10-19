@@ -5,20 +5,21 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    static public MenuManager instance;
+    // ENCAPSULATION
+    static public MenuManager Instance { get; private set; }
     public string playerName;
     public string bestPlayerName = "";
     public int bestScore = 0;
 
     void Awake()
     {
-        if (MenuManager.instance)
+        if (MenuManager.Instance)
         {
             Destroy(gameObject);
         }
         else
         {
-            MenuManager.instance = this;
+            MenuManager.Instance = this;
             // scene 共享
             DontDestroyOnLoad(gameObject);
         }

@@ -13,8 +13,8 @@ public class Menu : MonoBehaviour
     public TMP_InputField playerInput;
     void Start()
     {
-        bestSore.text = $"Best Score {MenuManager.instance.bestPlayerName}: {MenuManager.instance.bestScore}";
-        playerInput.text = MenuManager.instance.playerName;
+        bestSore.text = $"Best Score {MenuManager.Instance.bestPlayerName}: {MenuManager.Instance.bestScore}";
+        playerInput.text = MenuManager.Instance.playerName;
     }
 
     public void StartGame()
@@ -34,6 +34,6 @@ public class Menu : MonoBehaviour
     public void EnterName(string value)
     {
         // 设置玩家名称
-        MenuManager.instance.playerName = value;
+        MenuManager.Instance.playerName = value;
     }
 }
