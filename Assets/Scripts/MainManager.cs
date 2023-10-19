@@ -78,10 +78,11 @@ public class MainManager : MonoBehaviour
         GameOverText.SetActive(true);
     }
 
+    // ABSTRACTION
     public void UpdateScore()
     {
         ScoreText.text = $"Score : {m_Points}";
-        var mm = MenuManager.instance;
+        var mm = MenuManager.Instance;
         if (mm)
         {
             if (m_Points >= mm.bestScore)
